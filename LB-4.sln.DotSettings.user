@@ -2,5 +2,6 @@
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=5a5796dc_002D38e2_002D4821_002Db15a_002D6fe07889255d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="RectangleTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
     &lt;TestId&gt;xUnit::F43788C6-4CA6-4C41-82FD-8B34F72BD055::.NETFramework,Version=v4.8.1::LB_4.CircleTest&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::F43788C6-4CA6-4C41-82FD-8B34F72BD055::.NETFramework,Version=v4.8.1::LB_4.RectangleTest&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

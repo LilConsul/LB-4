@@ -26,8 +26,8 @@ namespace LB_4 {
             var expected = new Circle(_center);
             actual.Move(deltaX, deltaY);
             
-            Assert.Equal(expected.center.X + deltaX, actual.center.X);
-            Assert.Equal(expected.center.Y + deltaY, actual.center.Y);
+            Assert.Equal(expected.Center.X + deltaX, actual.Center.X);
+            Assert.Equal(expected.Center.Y + deltaY, actual.Center.Y);
         }
 
         [Theory]
@@ -39,8 +39,7 @@ namespace LB_4 {
             var expected = new Circle(_center);
             actual.Scale(scale);
             
-            Assert.Equal(expected.center.X * scale, actual.center.X);
-            Assert.Equal(expected.center.Y * scale, actual.center.Y);
+            Assert.Equal(expected.Radius * scale, actual.Radius);
         }
         
     }
