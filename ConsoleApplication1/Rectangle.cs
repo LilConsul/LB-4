@@ -1,11 +1,10 @@
 using System;
 
 namespace ConsoleApplication1 {
-    public class Ractangle : IShape {
+    public class Rectangle : IShape {
         private Point uperLeft, upperRight, lowerLeft, lowerRight;
         private Point center;
         private double height, width;
-        private Color color;
 
         public double Height {
             get => height;
@@ -15,6 +14,7 @@ namespace ConsoleApplication1 {
                 height = value;
             }
         }
+
         public double Width {
             get => width;
             set {
@@ -25,7 +25,7 @@ namespace ConsoleApplication1 {
         }
 
         public Color Color { get; set; }
-        
+
         private void InitializePoint() {
             var x = height / 2;
             var y = width / 2;
@@ -36,8 +36,8 @@ namespace ConsoleApplication1 {
             lowerRight = center + new Point(x, y);
         }
 
-        public Ractangle(Point center, Color color = Color.White, double height = 1, double width = 1) {
-            this.color = color;
+        public Rectangle(Point center, Color color = Color.White, double height = 1, double width = 1) {
+            Color = color;
             Height = height;
             Width = width;
             this.center = center;
@@ -49,19 +49,23 @@ namespace ConsoleApplication1 {
             InitializePoint();
         }
 
-        public void Scale(uint scale) {
+        public void Scale(double scale) {
             if (scale == 0)
                 throw new Exception("Не можна змінити розмір на 0!");
             height *= scale;
             width *= scale;
             InitializePoint();
         }
-        
+
         public void Rotate(double deltaRot) {
             uperLeft.Rotate(center, deltaRot);
             upperRight.Rotate(center, deltaRot);
             lowerLeft.Rotate(center, deltaRot);
             lowerRight.Rotate(center, deltaRot);
+        }
+
+        public (Point lowerLeft, Point upperRight) GetPoints() {
+            return (lowerLeft, upperRight);
         }
     }
 }

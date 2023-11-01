@@ -1,8 +1,8 @@
-namespace LB_4 {
+namespace ConsoleApplication1 {
     interface IShape {
-        void Rotate(int delRot);
-        void Move(int delX, int delY);
-        void Scale(uint scale);
+        void Rotate(double deltaRot);
+        void Move(int deltaX, int deltaY);
+        void Scale(double scale);
         Color Color { get; set; }
     }
 }

@@ -1,4 +1,4 @@
-namespace LB_4 {
+namespace ConsoleApplication1 {
     public enum Color {
         Red,
         Blue,
